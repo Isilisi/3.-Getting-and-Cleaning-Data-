@@ -1,10 +1,17 @@
-### id 
+
+This file explains the columns in the output file "tidy_data.txt" of "run_analysis.R"
+
+### 1.
+
+The line number, 1 to 5940 in order, can be ignored
+
+### 2. id 
 
 A single integer, a person's id, in range 1-30
 
-### activity
+### 3. activity
 
-The name of an activity, is one of
+The name of an activity, is one of the six listed below. They were obtained by relpacing numbers in "y_test.txt" and "y_train.txt" by corresponding activity labels in "activity_labels.txt" converted to lowercase.
 
 * walking
 * walking_upstairs
@@ -13,7 +20,13 @@ The name of an activity, is one of
 * standing
 * laying
 
-### feature_name
+### 4. feature_name
+
+For original description of feature names see "features_info.txt" in "UCI HAR Dataset".
+
+The original 561 features in "features.txt" were mapped as column names to the data in "X_test" and "X_train". The features were then filtered to the 33 measurements of mean and 33 measurements standard deviation (containing either "mean()" or "std()" in their name). Then the name components "mean()" and "std()" were removed, dashes replaced by underscores. No further changes were made to keep the naming style compatible with the original and to prevent unnecessary complications.
+
+Note, features containing "meanFreq()" and "gravityMean" were both ignored, as they don't represent the main mean and standard deviation measurements. No other features contain "mean" or "std" in their name.
 
 * fBodyAcc_X
 * fBodyAcc_Y
@@ -50,10 +63,10 @@ The name of an activity, is one of
 * tGravityAccMag
 
 
-### mean
+### 5. mean
 
-The average mean value recorded for the corresponding person-activity-feature observation
+The average mean value recorded for the corresponding person-activity-feature observation, unitless, in range [-1,1]
 
-### std
+### 6. std
 
-The average standard deviation for the corresponding person-activity-feature observation
+The average standard deviation for the corresponding person-activity-feature observation, unitless, in range [-1,1]
