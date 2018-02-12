@@ -1,16 +1,16 @@
-### overview
+### Overview
 
-This is the final project of the third course, "Getting and Cleaning Data", of the coursera "Data Science specialisation".
+This is the final project of the third course, `Getting and Cleaning Data`, of the coursera `Data Science Specialisation`.
 
 The purpose of this project is to practice data-cleaning.
 
-### files description
+### Files description
 
-The original data is in "UCI HAR Dataset" folder. The folder can also be downloaded here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+The original data is in `UCI HAR Dataset` folder. The folder can also be downloaded here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 A full description is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-The full analysis script lies in "run_analysis.R". The analysis consists of five steps:
+The full analysis script lies in `run_analysis.R`. The analysis consists of five steps:
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -18,15 +18,8 @@ The full analysis script lies in "run_analysis.R". The analysis consists of five
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-The clean data set from step 5 is "tidy_data.txt". After downloading or reproducing, it can be read in as, for example:
-``` {r}
-tidy_data <- read.table(file.path(".", "tidy_data.txt"))
-tidy_data <- tidy_data[,-1]
-colnames(tidy_data) <- c("id", "activity", "feature_name", "mean", "std")
-```
+The clean data set from step 5 is `tidy_data.txt`. For more information on variables and analysis steps see `code_book.md`
 
-For more information on variables and analysis steps see "code_book.md"
+### For coursera markers
 
-### for coursera markers
-
-Please give a thorough feedback.
+Please give a thorough feedback. One sentence (worse - one word) comment is worthless

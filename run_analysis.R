@@ -77,5 +77,5 @@ average_data <- data %>%
         mutate(feature_name = gsub("_NA", "", feature_name))
 
 
-write.table(average_data, file="tidy_data.txt", col.names=FALSE)
+write.table(average_data, file="tidy_data.txt", row.names=FALSE)
 
